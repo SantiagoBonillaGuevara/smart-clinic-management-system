@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Add New Doctor</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #1e3a8a; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .btn { background-color: #1e3a8a; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Smart Clinic Management System - Admin Portal</h2>
+        <h3>Add New Doctor</h3>
+        <form th:action="@{/admin/doctors/add}" method="post">
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" name="name" value="Dr. Gregory House" required>
+            </div>
+            <div class="form-group">
+                <label>Email Address:</label>
+                <input type="email" name="email" value="house@smartclinic.com" required>
+            </div>
+            <div class="form-group">
+                <label>Speciality:</label>
+                <input type="text" name="speciality" value="Cardiology" required>
+            </div>
+            <div class="form-group">
+                <label>Available Times (comma separated):</label>
+                <input type="text" name="availableTimes" value="08:00, 09:00, 10:00, 14:00" required>
+            </div>
+            <button type="submit" class="btn">Register Doctor</button>
+        </form>
+    </div>
+</body>
+</html>
