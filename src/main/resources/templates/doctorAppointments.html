@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Portal - My Appointments</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #e0f2fe; margin: 20px; }
+        .container { max-width: 850px; margin: 0 auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #0284c7; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0284c7; color: white; }
+        .status-confirmed { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Smart Clinic - Doctor Portal</h2>
+        <h3>Scheduled Patient Appointments</h3>
+        <p><strong>Doctor:</strong> Dr. Gregory House (Cardiology)</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Appointment ID</th>
+                    <th>Patient Name</th>
+                    <th>Date & Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>Carlos Mendoza</td>
+                    <td>2026-09-15 09:00 AM</td>
+                    <td><span class="status-confirmed">CONFIRMED</span></td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Ana Maria Lopez</td>
+                    <td>2026-09-15 10:00 AM</td>
+                    <td><span class="status-confirmed">CONFIRMED</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
